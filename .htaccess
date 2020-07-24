@@ -1,0 +1,10 @@
+Bloqueando o acesso a extensões de arquivo específicas. O código a seguir força qualquer arquivo que termina em ".inc" a gerar um erro 403 Proibido quando acessado.
+
+Blocking access to specific file extensions. The following code forces any file ending in ".inc" to generate a 403 Forbidden error when accessed.
+
+# BLOQUEAR ACESSO AOS ARQUIVOS #
+# BLOCK ACCESS TO FILES #
+<Files ~ "\.inc$">  
+Order Allow,Deny
+Deny from All
+</Files>
